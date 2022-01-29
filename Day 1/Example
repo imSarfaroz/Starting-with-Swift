@@ -1,0 +1,31 @@
+import UIKit
+
+var start = "greetings" // creating new variable
+start = "hello"     // modifying data
+
+var age = 54   // int
+var dataOfBirth = 32.1 // float
+
+var line =
+"""
+this settence
+could be
+in different lines
+"""
+
+var pi = 3.14 // double
+var awesome = false // boolean type
+
+var score = 99
+var results = "Your score could be \(score)" // quite good
+
+var results2 = "Another score could be \(results)"
+
+let constant = 99.99 // constant value can never change
+// constant = 100 failure
+
+var name: String = "Isabella" // specifying the type of variable
+var ages: Int = 12
+var height: Double = 1.32
+let weight: Float = 1.2434  //specifying the type of variable
+let isFool: Bool = false
