@@ -1,0 +1,85 @@
+import  UIKit
+
+// if need precise, fixed values -> tuple
+let address = (house: 555, street: "Uzoqov", city: "Gafurov", zip: 735690)
+
+// unique, or chesking the item extremely quickly -> sets
+let set = Set(["asda", "sdad", "dada"])
+
+// if duplicates and all values matters -> arrays
+let me = ["dfsd", "tom", "jerry", "amir", "tom"]
+
+
+// Dictionaries
+
+let heights = [
+    "Sarfaroz": "1.82",
+    "Sam": "1.72"
+]
+print(heights["Sarfaroz"])
+print(heights["1.82", default: "Unknown"])
+
+// Arrays, sets, and dic are called collections
+// Empty dic is like
+
+var teams = [String: String]()
+teams["tajiksitan"] = "strong"
+
+print(teams)
+print(teams["tajiksitan"])
+
+// empty arrays
+var words = [Int]()
+
+//emprty sets
+var anotherWords = Set<String>()
+var numbers = Set<Int>()
+
+// empty dics and arrays
+var scores = Dictionary<String, Int>()
+var results = Array<Int>()
+
+// Enumirations
+let result = "failure"
+let results2 = "failed"
+let results3 = "fail"
+
+enum Result {
+    case success
+    case failure
+    case unknown
+}
+
+var results4 = Result.success
+let results5 = Result.unknown
+
+enum animalHave {
+    case dog
+    case cat
+    case dontHave
+}
+
+let myPet = animalHave.dontHave
+var myPet2 = animalHave.cat
+
+
+enum Activity {
+    case running(destination: String)
+    case talking(destination: String)
+    case singing(destination: Bool)
+    case sleeping
+}
+
+let singing = Activity.singing(destination: false)
+var talking = Activity.talking(destination: "world news")
+
+enum Planet: Int {
+    case earth
+    case vanus
+    case mars
+    case pluton = 4
+}
+
+let earth = Planet(rawValue: 0)
+print(Planet(rawValue: 2))
+
