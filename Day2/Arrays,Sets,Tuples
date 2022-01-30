@@ -1,0 +1,32 @@
+import UIKit
+// arrays
+
+let Sarfaroz:String = "man"
+let Isabella = "woman"
+let Sam = "boy"
+let Bella = "girl"
+
+var couples = [Sarfaroz, Isabella, Sam, Bella]
+print(couples[0])
+
+//couples[0] = "My " + couples[3]
+//print(couples[0])
+
+for counter in 0...3 {
+    couples[counter] = "My " + couples[counter]
+    print(couples[counter])
+}
+
+// set stored in a random order
+// set must include unique value
+
+let colors = Set(["red", "green", "blue"])
+
+var name = (first: "Sam", last: "Tom")
+name.0
+name.last
+
+// tuples once created cant change or add more item
+// in arrays we could easily do that
+var age = (first: 13, second: 10, third: 14, fourth: 5)
+print(age.second, age.fourth)
