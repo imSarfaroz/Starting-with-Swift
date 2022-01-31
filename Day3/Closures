@@ -1,0 +1,64 @@
+
+// CLOSURES
+
+let driving = {
+    print("I am wirting here because of the driving")
+}
+
+driving()
+
+// Accepting parameters in a closure
+
+let driver = { (place: String) in
+    print("I am a good \(place)")
+}
+driver("driver")
+
+let smoker = { (place: Int) in
+    print("I smore \(place) cigsarettes today")
+}
+
+smoker(3)
+
+// Returning values in closures
+
+let drivingWithReturn = { (place: String) -> String in
+    return "I am going to \(place)"
+}
+
+let you = drivingWithReturn("hoho")
+print(you)
+
+
+let smiling = {
+    print("I am smiling tomorrow")
+}
+
+func travel(action: () -> Void) {
+    print("I am getting to go")
+    action()
+    print("i arravied asfely")
+}
+
+travel(action: smiling)
+
+func travel2(action: () -> Void) {
+    print("I am getting ready")
+    action()
+    print("I arravied")
+}
+
+travel2() {
+    print("how are you doing so far?")
+}
+
+func relaxing(action: () -> Void) {
+    print("hoho")
+    action()
+    print("hehe")
+    action()
+}
+
+relaxing () {
+    print("I am no way that relaxing")
+}
