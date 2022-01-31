@@ -1,0 +1,141 @@
+import UIKit
+
+// Functions
+
+func printHelp() {
+    let message = """
+Welcome to my App
+
+Run this for showing the app and being one of the top IOS developers in the world
+"""
+    print(message)
+}
+
+printHelp()
+
+// Accepting parameters
+
+print("Hello world")
+
+func square(number: Int) {
+    print(number * number)
+}
+
+square(number: 8)
+square(number: 19)
+
+// Returning values
+
+func square2(number: Int) -> Int {
+    return number * number
+}
+
+let res = square2(number: 8)
+print(res)
+
+func getUser() -> [String] {
+    ["Taylor", "Swift"]
+}
+
+let user = getUser()
+print(user[0])
+
+// Parameter numbers
+
+func square3(number: Int) -> Int {
+    return number * number
+}
+
+let r = square3(number: 5)
+
+func sayHello(to name: String) {
+    print("Hello, \(name)")
+}
+
+sayHello(to: "Taylor")
+
+func kickGoal(to teamName: String){
+    print("Shot a goal to \(teamName)")
+}
+kickGoal(to: "Barselona")
+
+// labels
+
+func greet(_ person: String) {
+    print("Hello, \(person)")
+}
+greet("Sarfaroz")
+
+func greet1(_ person: String, nicely: Bool = true) {
+    if nicely == true {
+        print("Hello \(person)")
+    } else {
+        print("Oh no, it's \(person) again...")
+    }
+}
+
+greet1("Sarfaroz")
+greet1("Sarfaroz", nicely: false)
+
+// Variadic functions
+
+print("Haters", "gonna", "hate")
+
+func square4(numbers: Int...) {
+    for number in numbers {
+        print("\(number) square is \(number * number)")
+    }
+}
+
+square4(numbers: 2, 3, 4, 5, 6)
+
+func cube(numbers: Int...) {
+    for number in numbers {
+        print("\(number) cube is \(number*number*number)")
+    }
+}
+
+cube(numbers: 3, 4, 5 ,6)
+
+// Writing throwing functions
+
+enum passwordError: Error {
+    case obvious
+}
+
+//func checkPassword(_ password: String) throws -> Bool {
+//    if password == "password" {
+//        print("Your passowrd is \(password)")
+//        throw passwordError.obvious
+//    }
+//    return true
+//}
+//
+//checkPassword("password")
+
+// Running throwing functions
+
+func checkPassword(_ password: String) throws -> Bool {
+    if password == "password" {
+        print("Your passowrd is \(password)")
+        throw passwordError.obvious
+    }
+    return true
+}
+
+do {
+    try checkPassword("password")
+    print("That passord is good")
+}catch{
+    print("you cant use this password at all!")
+}
+
+// inout parameters
+
+func doubleInPlace(number: inout Int) {
+    number *= 2
+    print(number)
+}
+
+var myNum  = 101
+doubleInPlace(number: &myNum)
